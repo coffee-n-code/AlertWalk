@@ -32,4 +32,7 @@
   <li>Python</li>
 </ul>
 <h3>Why was this made?</h3>
-<p>For the coffee and code silly!<br /><img src="https://avatars3.githubusercontent.com/u/8634918?v=3&s=200"></p>
+<p>For the coffee and code silly!<br />
+<img src="https://avatars3.githubusercontent.com/u/8634918?v=3&s=200">
+<img src="https://38.media.tumblr.com/51d7fc6e85d70fdfcb706f0a26444750/tumblr_nemxoxuOXo1u0mknro2_250.png">
+</p>
