@@ -1,3 +1,4 @@
+import simplejson
 import re
 
 pat_way = re.compile('<way id=".*" timestamp="[^"]*" version="0" user="" actor="0">')
@@ -96,7 +97,7 @@ def process_node_or_way():
     else:
         n = process_node(line)
         if n != None:
-            nodes[n[0]] = n[1]
+            nodes[n[0]] = (n[1], n[2])
             return 1
         else:
             return 0
@@ -116,4 +117,6 @@ for wayid in ways.keys():
         nodeid = way[1][i]
         coordlist.append(nodes[nodeid])
     ways[wayid] = (way[0], coordlist)
-print ways
+
+outfile = open('../json/boundaries.json','w')
+outfile.write(simplejson.dumps(ways))
