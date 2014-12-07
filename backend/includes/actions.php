@@ -4,6 +4,12 @@ include('logic.php');
 
 class Actions extends Logic {
     
+    public $config;
+    
+    public function __construct() {
+        $this->config = $this->getConfig("../config.php");
+    }
+    
     // Returns array of (int) area id mapped to the (string) area name for a given lat & long
     public function getArea($id) {
         $query = "SELECT * FROM areas WHERE id = ?";
@@ -35,10 +41,23 @@ class Actions extends Logic {
         else {
             $crimes = $this->getCrimes($areaID);
         }
+        $config = $this->config;
+        // importance values. (What are the worst crimes??)
+        $importance = $config['importance'];
         // calculate the amount of unique years.
         $years = array();
+        $risk = 0; // by default. start at 0
         foreach($crimes as $c) {
-            
+            $type = $c['type'];
+            $amount = $c['amount'];
+            if(!(in_array($c['year'], $years))) {
+                $years[] = $year;
+            }
+            $risk += ($importance[$type] * $amount)
         }
+        $risk = (( $risk / count($crimes) / count($years));
+        return array(
+            "risk": $risk,
+        );
     }
 }
