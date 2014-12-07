@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 $action = $_REQUEST['action'];
 if(empty($action)) {
     // action is empty. return error.
