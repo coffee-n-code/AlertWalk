@@ -5,7 +5,6 @@ include 'actions.php';
 class Backend extends Actions {
 
     private $response = array();
-    private $action_response;
 
     public function setAction($action) {
         $this->response = $this->$action;
