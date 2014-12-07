@@ -5,10 +5,8 @@ class Logic {
     public $db;
     
     public function __construct() {
-        if($config['testing'] !== true) {
-            // run the database connection if not testing.
+
             $this->connectToDatabase();
-        }
     }
     
     public function getConfig($config_file) {
@@ -36,6 +34,7 @@ class Logic {
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         // Save the database instance to the global db variable.
         $this->db = $db;
+        return true;
     }
 
     public function getData() {
