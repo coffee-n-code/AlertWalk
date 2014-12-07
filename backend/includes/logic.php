@@ -5,22 +5,17 @@ class Logic {
     public $db;
     
     public function __construct() {
-
-            $this->connectToDatabase();
+        $this->connectToDatabase();
     }
     
     public function getConfig($config_file) {
         $config = include($config_file);
         return $config;
     }
-
-    public function calculateCrimeRating() {
-        
-    }
     
     public function queryDatabase($query, $data) {
         $db = $this->db;
-        print_r($db);
+        var_dump($db);
         $stmt = $db->prepare($query);
         $stmt->execute($data);
         return $stmt->fetchAll();
