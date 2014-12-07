@@ -31,7 +31,10 @@ function determine_neighbourhood(lat, lon)
             if (point_in_poly(lat, lon, poly))
             {
                 console.log(name + '[' + ks[i] + ']');
-                $('#location div').html(name + '[' + ks[i] + ']');
+                $('#location .loc-name').html(name);
+                $.getJSON("http://ec2-54-149-50-158.us-west-2.compute.amazonaws.com/index.php?action=getCrimeRating", function(obj) {
+                    alert(obj);
+                });
             }
         }
     });
@@ -46,9 +49,12 @@ $(document).ready(function() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(insertLocation);
     }
-});
-
-// Button functions
-$('#btn-taxi').click(function() {
-    alert('ring ring ring');
+    
+    $('#btn-taxi').bind('click', function() {
+        $('#ifrm').attr('src', 'tel:416-829-4222');
+    });
+    
+    $('#btn-bus').bind('click', function() {
+        window.open('http://www.nextbus.com/');
+    });
 });

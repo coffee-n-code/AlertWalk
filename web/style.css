@@ -33,14 +33,45 @@ main {
     padding-top: 70px;
     background-color: #03A9F5;
 }
+iframe { display: none; }
 #location, #buttons button {
     display: block;
     width: 100%;
     background-color: #FFF;
+    box-shadow: 0 0 3px #999;
 }
 
 #location {
     padding: 35px 20px 50px 20px;
+}
+
+#location > h1 {
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #999;
+}
+
+.loc-name {
+    padding: 20px;
+    padding-top: 30px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 40px;
+    background-color: #CCC;
+}
+
+.meter {
+    width: 60px;
+    margin: 10px auto;
+}
+
+.meter > div {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+    border: solid 1px #333;
+    border-radius: 15px;
 }
 
 #buttons {
@@ -55,23 +86,8 @@ main {
     line-height: 60px;
     margin-top: 20px;
     border: 0;
-    
-}
-
-#location > h1 {
-    margin-bottom: 20px;
-    font-family: 'Roboto';
-    font-weight: 300;
-    color: #999;
-}
-
-#location > div {
-    padding: 20px;
-    padding-top: 30px;
-    font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 40px;
-    background-color: #CCC;
+    font-size: 1.5em;
+    font-color: #999;
 }
 
 .left { float: left; }
