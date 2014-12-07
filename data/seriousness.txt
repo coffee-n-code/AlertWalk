@@ -1,0 +1,12 @@
+Murder: 40
+Rape: 25
+
+assault: 6
+sexual assault: 7
+break and enter: 9
+robbery: 7
+drug charges: 6
+stolen vehicle: 8
+theft $5000+: 8.5
+murder: 40
+
