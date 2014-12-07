@@ -59,7 +59,7 @@ class Actions extends Logic {
             }
             $risk += ($importance[$type] * $amount);
         }
-        $risk = (( $risk / count($crimes) / count($years));
+        $risk = (( $risk / count($crimes) / count($years)));
         return array(
             "risk" => $risk,
         );
