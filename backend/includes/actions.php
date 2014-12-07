@@ -56,7 +56,7 @@ class Actions extends Logic {
             $type = $c['type'];
             $amount = $c['amount'];
             if(!(in_array($c['year'], $years))) {
-                $years[] = $year;
+                $years[] = $c['year'];
             }
             $risk += ($importance[$type] * $amount);
         }
