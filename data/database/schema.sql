@@ -36,7 +36,6 @@ DROP TABLE IF EXISTS `areas`;
 CREATE TABLE `areas` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `name` VARCHAR(50) NULL DEFAULT NULL,
-  `coords` BLOB NULL DEFAULT NULL,
   `cityid` INTEGER NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
@@ -58,9 +57,9 @@ CREATE TABLE `cities` (
 -- Foreign Keys 
 -- ---
 
-ALTER TABLE `crimes` ADD FOREIGN KEY (areaid) REFERENCES `areas` (`id`);
-ALTER TABLE `crimes` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
-ALTER TABLE `areas` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
+-- ALTER TABLE `crimes` ADD FOREIGN KEY (areaid) REFERENCES `areas` (`id`);
+-- ALTER TABLE `crimes` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
+-- ALTER TABLE `areas` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
 
 -- ---
 -- Table Properties

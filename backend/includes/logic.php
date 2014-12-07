@@ -13,6 +13,13 @@ class Logic {
         return $config;
     }
     
+    public function getCrimes($areaID) {
+        $query = "SELECT * FROM crimes WHERE areaid = ?";
+        $data = array($areaID);
+        $crimes = $this->queryDatabase($query, $data);
+        return $crimes;
+    }
+    
     public function queryDatabase($query, $data) {
         $db = $this->db;
         var_dump($db);
