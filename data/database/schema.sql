@@ -58,9 +58,9 @@ CREATE TABLE `cities` (
 -- Foreign Keys 
 -- ---
 
-ALTER TABLE `crimes` ADD FOREIGN KEY (areaid) REFERENCES `areas` (`id`);
-ALTER TABLE `crimes` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
-ALTER TABLE `areas` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
+-- ALTER TABLE `crimes` ADD FOREIGN KEY (areaid) REFERENCES `areas` (`id`);
+-- ALTER TABLE `crimes` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
+-- ALTER TABLE `areas` ADD FOREIGN KEY (cityid) REFERENCES `cities` (`id`);
 
 -- ---
 -- Table Properties
