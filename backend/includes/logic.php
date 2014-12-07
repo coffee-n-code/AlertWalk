@@ -21,8 +21,8 @@ class Logic {
     }
     
     public function queryDatabase($query, $data) {
-        print_r($db);
         $db = $this->db;
+        print_r($db);
         $stmt = $db->prepare($query);
         $stmt->execute($data);
         return $stmt->fetchAll();
