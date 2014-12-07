@@ -1,6 +1,6 @@
 <?php
 return array(
-    "config" => true,
+    "config" => false,
     "database" => array(
         "name" => "",
         "user" => "",
