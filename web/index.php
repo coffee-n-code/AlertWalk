@@ -21,9 +21,9 @@
                 <h1>Your current location is:</h1>
                 <div class="loc-name">...</div>
                 <div class="meter">
-                    <div style="background-color:#FFC107;">&nbsp;</div>
-                    <div style="background-color:#FF9800;">&nbsp;</div>
-                    <div style="background-color:#F44336;">&nbsp;</div>
+                    <div id="low">&nbsp;</div>
+                    <div id="med">&nbsp;</div>
+                    <div id="high">&nbsp;</div>
                     <br class="clr">
                 </div>
             </div>

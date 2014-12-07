@@ -30,10 +30,33 @@ function determine_neighbourhood(lat, lon)
             poly = way[1];
             if (point_in_poly(lat, lon, poly))
             {
-                console.log(name + '[' + ks[i] + ']');
                 $('#location .loc-name').html(name);
-                $.getJSON("http://ec2-54-149-50-158.us-west-2.compute.amazonaws.com/index.php?action=getCrimeRating", function(obj) {
-                    alert(obj);
+                data = {
+                    "area_id": i+1,
+                }
+                $.post("http://ec2-54-149-50-158.us-west-2.compute.amazonaws.com/index.php?action=getCrimeRating", data, function(json) {
+                    obj = JSON.parse(json);
+                    risk = obj["risk"];
+                    if (risk > 75 && risk < 100) {
+                        $('#low').css('background-color', '#FFC107');
+                    }
+                    else if (risk > 100 && risk < 125) {
+                        $('#med').css('background-color', '#FF9800');
+                    }
+                    else if (risk > 125) {
+                        $('#high').css('background-color', '#F44336');
+                    }
+                    else {
+                        setInterval(function() {
+                            $('#low').css('background-color', 'limegreen');
+                        }, 500);
+                        setInterval(function() {
+                            $('#med').css('background-color', 'limegreen');
+                        }, 1000);
+                        setInterval(function() {
+                            $('#high').css('background-color', 'limegreen');
+                        }, 1500);
+                    }
                 });
             }
         }
