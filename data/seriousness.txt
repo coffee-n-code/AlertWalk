@@ -7,3 +7,12 @@ stolen vehicle: 8
 theft $5000+: 8.5
 murder: 40
 
+In format.
+assault: 0.15
+sexual assault: 0.175
+break and enter: 0.225
+robbery: 0.175
+drug charges: 0.15
+stolen vehicle: 0.2
+theft $5000+: 0.2125
+murder: 1
