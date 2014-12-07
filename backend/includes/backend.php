@@ -7,7 +7,7 @@ class Backend extends Actions {
     private $response = array();
 
     public function setAction($action) {
-        $this->response = $this->$action;
+        $this->response = $this->$action();
     }
 
     public function getResponse($json=true) {
