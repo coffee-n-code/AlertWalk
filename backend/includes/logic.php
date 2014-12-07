@@ -5,7 +5,7 @@ class Logic {
     public $db;
     
     public function __construct() {
-        $this->connectToDatabase();
+        // $this->connectToDatabase();
     }
     
     public function getConfig($config_file) {
