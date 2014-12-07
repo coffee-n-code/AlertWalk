@@ -1,4 +1,6 @@
 <?php
+define('root_dir', dir(__FILE__));
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
