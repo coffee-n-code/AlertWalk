@@ -21,7 +21,14 @@ class Logic {
     }
 
     public function calculateCrimeRating() {
+        
+    }
     
+    public function queryDatabase($query, $data) {
+        $db = $this->db;
+        $stmt = $db->prepare($query);
+        $stmt->execute($data);
+        return $stmt->fetchAll();
     }
 
     public function connectToDatabase() {
