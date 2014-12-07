@@ -35,7 +35,13 @@ class Logic {
     }
 
     public function getData() {
+        $data = array();
         
+        if ($config['testing'] === true) {
+            $data = include('testing.php');
+        }
+        
+        return $data;
     }
 
 }
