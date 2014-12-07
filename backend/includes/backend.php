@@ -8,7 +8,7 @@ class Backend {
         
     }
 
-    public function outputResponse($json=true) {
+    public function getResponse($json=true) {
         $response = $this->response;
         if($json === true) {
             $response = json_encode($response);
