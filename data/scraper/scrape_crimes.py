@@ -8,7 +8,7 @@ def process_row(row, firstrow):
     print(result)
 
 def process_csv(filename):
-    with open(filename + '.csv', newline='') as f:
+    with open('../' + filename + '.csv', newline='') as f:
         reader = csv.reader(f)
         firstrow = None
         for row in reader:

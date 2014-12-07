@@ -10,7 +10,7 @@ pat_tag = re.compile('<tag k="([^"]*)" v="([^"]*)"/>')
 pat_slashway = re.compile('</way>')
 pat_node = re.compile('<node id="([^"]*)" timestamp="[^"]*" version="0" user="" actor="0" lon="([^"]*)" lat="([^"]*)"/>')
 
-f = open('boundaries.osm')
+f = open('../boundaries.osm')
 nodes = {}
 ways = {}
 
