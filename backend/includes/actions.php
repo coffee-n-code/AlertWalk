@@ -7,7 +7,7 @@ class Actions extends Logic {
     public $config;
     
     public function __construct() {
-        $this->config = $this->getConfig("/../../config/config.php");
+        $this->config = $this->getConfig("/config/config.php");
     }
     
     // Returns array of (int) area id mapped to the (string) area name for a given lat & long
