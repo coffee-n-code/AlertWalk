@@ -3,12 +3,8 @@
 class Logic {
 
     public $db;
-
-    protected $config;
     
     public function __construct() {
-        $config = $this->getConfig('/../../config/config.php');
-        $this->config = $config;
         if($config['testing'] !== true) {
             // run the database connection if not testing.
             $this->connectToDatabase();
