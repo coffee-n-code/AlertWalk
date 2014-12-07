@@ -11,7 +11,8 @@ class Actions extends Logic {
     }
     
     // Returns array of (int) area id mapped to the (string) area name for a given lat & long
-    public function getArea($id) {
+    public function getArea() {
+        $id = $_POST['id'];
         $query = "SELECT * FROM areas WHERE id = ?";
         $data = array($id);
         $area = $this->queryDatabase($query, $data);
@@ -22,7 +23,8 @@ class Actions extends Logic {
         );
     }
     
-    public function getCity($id) {
+    public function getCity() {
+        $id = $_POST['id'];
         $query = "SELECT * from cities WHERE id = ?";
         $data = array($id);
         $city = $this->queryDatabase($query, $data);
@@ -33,7 +35,9 @@ class Actions extends Logic {
     }
     
     // Returns (int) for a given (int) areaID
-    public function getCrimeRating($areaID, $filter=null) {
+    public function getCrimeRating() {
+        $areaID = $_POST['area_id'];
+        $filter = $_POST['filter'];
         $crimes = null;
         if($filter !== null) {
             $crimes = $this->getCrimes($areaID, $filter);
