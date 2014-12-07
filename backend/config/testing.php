@@ -12,7 +12,7 @@ return array(
         "areas" => array(
             array(
                 "name" => "Example Area",
-                "coords" => json_encode(array(
+                "coords" => json_encode(array( // lat => lon
                     10 => 20,
                     30 => 20,
                 )),
