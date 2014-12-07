@@ -1,9 +1,9 @@
 <?php
 $action = $_REQUEST['action'];
 if(empty($action)) {
-  // action is empty. return error.
-  http_response_code(400);
-  exit;
+    // action is empty. return error.
+    http_response_code(400);
+    exit;
 }
 
 include('includes/backend.php');

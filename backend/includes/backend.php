@@ -2,18 +2,18 @@
 
 class Backend {
 
-  private $response = array();
+    private $response = array();
 
-  public function setResponse() {
-    
-  }
-  
-  public function outputResponse($json=true) {
-    $response = $this->response;
-    if($json === true) {
-      $response = json_encode($response);
+    public function setResponse() {
+        
     }
-    return $response;
-  }
+
+    public function outputResponse($json=true) {
+        $response = $this->response;
+        if($json === true) {
+            $response = json_encode($response);
+        }
+        return $response;
+    }
 
 }
