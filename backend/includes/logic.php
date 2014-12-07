@@ -15,7 +15,7 @@ class Logic {
         }
     }
     
-    public function getConfig($config_file = 'config.php') {
+    public function getConfig($config_file) {
         $config = include($config_file);
         return $config;
     }
