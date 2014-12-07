@@ -1,6 +1,3 @@
-Murder: 40
-Rape: 25
-
 assault: 6
 sexual assault: 7
 break and enter: 9
