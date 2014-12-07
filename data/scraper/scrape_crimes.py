@@ -2,7 +2,6 @@ import simplejson
 import csv
 
 stuff = []
-outfile = open('../crimes.csv', 'w')
 
 def process_row(row, firstrow, crime_name):
     assert(len(row) == len(firstrow))
@@ -17,8 +16,7 @@ def process_row(row, firstrow, crime_name):
             year = k
             neighbourhood_id = result['Number']
             neighbourhood = result['Name']
-            outfile.write(neighbourhood_id + ",\"" + neighbourhood + '\",\"' + crime_name + "\"," + year + "," + amount + "\n")
-    stuff.append(result)
+            stuff.append([neighbourhood_id, neighbourhood, crime_name, year, amount])
 
 def process_csv(filename, crime_name):
     with open('../' + filename + '.csv', newline='') as f:
