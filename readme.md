@@ -14,3 +14,20 @@
 <h3>What is a safezone?</h3>
 <p>A safezone is a open business and/or location which is known to be a meeting area for a large amount of people. In simplest terms, these locations tend to be always open and are less risky for crime.</p>
 <p>Example locations could be Starbucks, Tim Hortons or malls open late</p>
+<h2>Technologies <span style="font-size: 12px">( for the nerds )</h2>
+<h3>Backend</h3>
+<ul>
+  <li>PHP</li>
+  <li>PDO MySQL Driver</li>
+  <li>MySQL</li>
+  <li>Amazon AWS (for server)</li>
+</ul>
+<h3>Frontend</h3>
+<ul>
+  <li>Native Android Development</li>
+  <li>Pure designing genius</li>
+</ul>
+<h3>Scraping / Data Entry</h3>
+<ul>
+  <li>Python</li>
+</ul>
