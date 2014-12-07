@@ -8,6 +8,7 @@ class Actions extends Logic {
     
     public function __construct() {
         $this->config = $this->getConfig(root_dir."config/config.php");
+        $this->connectToDatabase();
     }
     
     // Returns array of (int) area id mapped to the (string) area name for a given lat & long
