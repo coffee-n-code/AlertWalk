@@ -5,21 +5,10 @@ include 'actions.php';
 class Backend extends Actions {
 
     private $response = array();
-    
-    protected $config;
-    
-    public function __construct() {
-        $config = $this->getConfig('../config/config.php');
-        $this->config = $config;
-    }
-    
-    public function getConfig($config_file = 'config.php') {
-        $config = include($config_file);
-        return $config;
-    }
+    private $action_response;
 
-    public function setResponse() {
-        
+    public function setAction($action) {
+        $this->response = $this->$action;
     }
 
     public function getResponse($json=true) {
@@ -28,15 +17,6 @@ class Backend extends Actions {
             $response = json_encode($response);
         }
         return $response;
-    }
-    
-    public function getData() {
-        if($this->config['testing'] === true) {
-            // in testing mode.
-        }
-        else {
-            // product mode.
-        }
     }
 
 }
