@@ -17,9 +17,9 @@ class Actions extends Logic {
         $data = array($id);
         $area = $this->queryDatabase($query, $data);
         return array(
-            "id": $id,
-            "name": $area['name'],
-            "cityid": $area['cityid'],
+            "id" => $id,
+            "name" => $area['name'],
+            "cityid" => $area['cityid'],
         );
     }
     
@@ -29,8 +29,8 @@ class Actions extends Logic {
         $data = array($id);
         $city = $this->queryDatabase($query, $data);
         return array(
-            "id": $id,
-            "name": $city['name'],
+            "id" => $id,
+            "name" => $city['name'],
         );
     }
     
@@ -61,7 +61,7 @@ class Actions extends Logic {
         }
         $risk = (( $risk / count($crimes) / count($years));
         return array(
-            "risk": $risk,
+            "risk" => $risk,
         );
     }
 }
