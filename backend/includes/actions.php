@@ -57,7 +57,7 @@ class Actions extends Logic {
             if(!(in_array($c['year'], $years))) {
                 $years[] = $year;
             }
-            $risk += ($importance[$type] * $amount)
+            $risk += ($importance[$type] * $amount);
         }
         $risk = (( $risk / count($crimes) / count($years));
         return array(
