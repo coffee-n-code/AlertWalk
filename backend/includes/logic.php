@@ -18,6 +18,14 @@ class Logic {
     
     }
 
+    public function connectToDatabase() {
+        $database = $this->config['database'];
+        $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', $database['user'], $database[''];
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $this->db = $db;
+    }
+
     public function getData() {
         if($this->config['testing'] === true) {
             // in testing mode.
