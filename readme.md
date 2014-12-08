@@ -1,4 +1,4 @@
-<h1 style="text-align: center">AlertWalk</h1>
+<p align="center"><h1 style="text-align: center">AlertWalk</h1></p>
 <h2>What is does</h2>
 <p>AlertWalk is an app designed to notify its users when they are adventuring through a dangerous area. The app uses scraped information from various police crime API's as well as crime statistics in order to calculate risk ratings for certain areas.</p>
 <p>Depending on the risk of the area, the user will be given "options" to perform certain actions including calling a taxi, seeing the local bus route (online) or directions to the closest safezone. (See safezone section).
