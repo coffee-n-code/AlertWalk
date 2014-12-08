@@ -22,7 +22,7 @@ class Logic {
     
     public function queryDatabase($query, $data) {
         $db = $this->db;
-        var_dump($db);
+        // var_dump($db);
         $stmt = $db->prepare($query);
         $stmt->execute($data);
         return $stmt->fetchAll();
