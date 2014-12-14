@@ -24,6 +24,7 @@
 </ul>
 <h3>Frontend</h3>
 <ul>
+  <li>Web - HTML(5)/CSS/Javascript (jQuery)</li>
   <li>Native Android Development</li>
   <li>Pure designing genius</li>
 </ul>
